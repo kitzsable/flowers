@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Flowers</string>
+    <string name="slogan">Care for flowers - it\'s easy</string>
+    <string name="nav_main">Главый экран</string>
+    <string name="nav_my_flowers">Мои цветы</string>
+    <string name="nav_all_flowers">Все цветы</string>
+    <string name="nav_support">Support</string>
+    <string name="nav_schedule">График ухода</string>
+    <string name="nav_settings">Настройки</string>
+    <string name="nav_open_drawer">Open navigation drawer</string>
+    <string name="nav_close_drawer">Close navigation drawer</string>
+    <string name="add">Добавить</string>
+    <string name="drop">Удалить</string>
+</resources>
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_main"
+            android:icon="@android:drawable/btn_star_big_off"
+            android:title="@string/nav_main"
+            android:checked="true"/>
+
+        <item
+            android:id="@+id/nav_my_flowers"
+            android:icon="@android:drawable/ic_menu_save"
+            android:title="@string/nav_my_flowers"/>
+
+        <item
+            android:id="@+id/nav_all_flowers"
+            android:icon="@android:drawable/ic_search_category_default"
+            android:title="@string/nav_all_flowers"/>
+
+        <item
+            android:id="@+id/nav_schedule"
+            android:icon="@android:drawable/ic_menu_today"
+            android:title="@string/nav_schedule"/>
+    </group>
+
+    <item android:title="@string/nav_support">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@android:drawable/ic_menu_preferences"
+                android:title="@string/nav_settings"/>
+        </menu>
+    </item>
+
+
+</menu>
