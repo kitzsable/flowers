@@ -84,13 +84,13 @@ public class Flower extends AppCompatActivity {
 
         // Добавление полива в календарь и таблицу SCHEDULE.
         addEvent("полив", name, wateringFrequency);
-        FlowersDatabaseHelper.insertSchedule(db, name, "Полив", getStartDate(), wateringFrequency);
+        FlowersDatabaseHelper.insertSchedule(db, name, R.drawable.leica, getStartDate(), wateringFrequency);
 
 
         // Добавление обрызгивания в календарь и таблицу SCHEDULE, если это требуется.
         if (sprinklingFrequency != 0) {
             addEvent("обрызгивание", name, sprinklingFrequency);
-            FlowersDatabaseHelper.insertSchedule(db, name, "Обрызгивание", getStartDate(), sprinklingFrequency);
+            FlowersDatabaseHelper.insertSchedule(db, name, R.drawable.sprayer, getStartDate(), sprinklingFrequency);
         }
     }
 

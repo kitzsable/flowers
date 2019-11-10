@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -193,7 +194,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 // Обновляем дату ближайшего полива/обрызгивания для записи
                 // Параметры: БД, Имя, Тип, Новая дата
                 FlowersDatabaseHelper.updateSchedule(sqLiteDatabase, cursorForUpdate.getString(0),
-                        cursorForUpdate.getString(1), resultDate);
+                        cursorForUpdate.getInt(1), resultDate);
             }
 
             // Закрываем базу данных и курсор
@@ -202,5 +203,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             cursorForUpdate.close();
             return null;
         }
+    }
+
+    public void goToMy(View view) {
+        Fragment fragment = new AllFlowers();
+        ((AllFlowers) fragment).i = true;
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.content_frame, fragment);
+        ft.commit();
+    }
+
+    public void goToAll(View view) {
+        Fragment fragment = new AllFlowers();
+        ((AllFlowers) fragment).i = false;
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.content_frame, fragment);
+        ft.commit();
+    }
+
+    public void goToSchedule(View view) {
+        Fragment fragment = new Schedule();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.content_frame, fragment);
+        ft.commit();
     }
 }
